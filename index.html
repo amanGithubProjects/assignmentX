@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a DOM Element and Appending Child</title>
+</head>
+<style>
+    .section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #container{
+        border: 2px solid rgb(224, 151, 16);
+        margin-top: 250px;
+        
+    }
+    button{
+        width: 250px;
+        height: 50px;
+        background-color: rgb(54, 206, 241);
+
+    }
+</style>
+<body>
+<div class="section">
+    <div id="container">
+
+    </div>
+</div>
+
+    
+</body>
+<script>
+    var btn = document.createElement("button");
+    btn.innerHTML = "Click Me";
+
+    // appending...
+    var container = document.getElementById("container");
+    container.appendChild(btn);
+
+    // adding event listner....
+    btn.addEventListener("click", function(){
+        alert("Button clicked!");
+    })
+
+</script>
+</html>
